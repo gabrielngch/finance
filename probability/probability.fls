@@ -1148,10 +1148,10 @@ INPUT ./probability.out
 INPUT probability.out
 INPUT ./probability.out
 INPUT probability.out
+OUTPUT probability.pdf
 INPUT ./probability.out
 INPUT ./probability.out
 OUTPUT probability.out
-OUTPUT probability.pdf
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplr.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplr.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -1197,6 +1197,8 @@ INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplr.tfm
+INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplb.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
@@ -1217,6 +1219,7 @@ INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplb.tfm
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplri.tfm
 INPUT d:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/tex-gyre/ec-qplb.tfm
 INPUT probability.aux
 INPUT ./probability.out
 INPUT ./probability.out

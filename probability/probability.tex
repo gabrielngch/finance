@@ -460,6 +460,8 @@
 \author{Gabriel Ng}
 \maketitle
 
+\section{Measures and Inequalities}
+
 A measurable space is a pair $(E,\mathcal E)$ where $E$ is a set and $\mathcal E$ is a sigma algebra on $E$.
 A probability space is a measurable space and a positive measure $\mathbb P$ on our space such that $\mathbb P(E) = 1$.
 We denote such a space by $(\Omega,\mathcal F, \mathbb P)$. The elements of $\mathcal F$ are called events.
@@ -471,20 +473,57 @@ When $\int X\mathrm d\mathbb P < \infty$, we say $X$ is integrable and denote th
 The spaces $L^p$ is defined by the set of $f$ so that $(E|f|^p)^{1/p}$ is finite up to equivalence (equal a.s.). $L^\infty$ is defined by the set of $f$ such that $|f(x)|$ is finite aside from a subset of measure $0$.
 
 \begin{prop}[Jensen's inequality]
-    Let $X$ be an integrable random variable on $\mathbb R^m$ and let $\Phi:\mathbb R^m\rightarrow\mathbb R\cup\{\infty\}$ be a lower semi-continuous convex function. Then 
-    $\Phi(X)$ is lower semi-integrable and \[E\Phi(X)\geq\phi(EX).\] Furthermore, if $\Phi$ is strictly convex and $\Phi(EX)<\infty$ then the inequality is strict unless $X$ takes only 1 value a.s.
+  Let $X$ be an integrable random variable on $\mathbb R^m$ and let $\Phi:\mathbb R^m\rightarrow\mathbb R\cup\{\infty\}$ be a lower semi-continuous convex function. Then 
+  $\Phi(X)$ is lower semi-integrable and \[E\Phi(X)\geq\phi(EX).\] Furthermore, if $\Phi$ is strictly convex and $\Phi(EX)<\infty$ then the inequality is strict unless $X$ takes only 1 value a.s.
 \end{prop}
 
 \emph{Proof.} $X$ is integrable so that $EX$ is finite. Since $\Phi$ is convex, there is a line through $EX$ and $\Phi(EX)$ such that the graph of $\Phi$ lies above this line (this is determined by the lower and upper derivatives).
 Hence $\Phi(X)\geq \Phi(EX)+c(X-EX)$ so that $E\Phi(X)\geq \Phi(EX)$. Now, unless $\Phi(X) = \Phi(EX)$, then our second statement holds.
 
 \begin{prop}[Holder's inequality]
-    Let $Z$, $W$ be positive random variables and $\alpha,\beta$ positive real numbers such that $\alpha+\beta = 1$. Then \[E(Z^\alpha W^\beta)\leq (EZ)^\alpha (EW)^\beta.\]
+  Let $Z$, $W$ be positive random variables and $\alpha,\beta$ positive real numbers such that $\alpha+\beta = 1$. Then \[E(Z^\alpha W^\beta)\leq (EZ)^\alpha (EW)^\beta.\]
 \end{prop}
 \emph{Proof.} Consider first the convex function $\exp(X)$. We know this is convex since it is a smooth function and its second derivative is greater than 0. Setting $a = \alpha\log\left(\frac{|Z|}{\norm{Z}_\alpha}\right)$ and 
 $b = \beta\log\left(\frac{|W|}{\norm(W)_\beta}\right)$, we get using the definition of convexity that $\frac{|f||g|}{\norm{f}_\alpha\norm{g}_\beta}\leq\frac{|f|^\alpha}{\norm{f}^\alpha_\alpha \alpha} + \frac{|g|^\beta}{\norm{g}^\beta_\beta \beta}$ upon which we obtain our inequality after integrating.
 
 \begin{prop}[Minkowski's inequality]
-    Let $X$ and $Y$ be real random variables and $p\geq 1$. Then \[\norm{X+Y}_p\leq\norm{X}_p+\norm{Y}_p.\]
+  Let $X$ and $Y$ be real random variables and $p\geq 1$. Then \[\norm{X+Y}_p\leq\norm{X}_p+\norm{Y}_p.\]
 \end{prop}
+\emph{Proof.} Use the Holder inequality and show that $(a+b)^p\leq 2^{p-1} a^p+2^{p-1}b^p$.
+
+It follows immediately from Minkowski's lemma that $L^p$ is a vector space. Furthermore, Jensen's inequality on the convex function $|x|^{p/q}$ gives the inclusion of $L^p$ into $L^q$ whenever $p\leq q$.
+
+\section{Variance, Covariance and the distribution of a random variable}
+
+If $X$ is a square integrable random variable $EX^2<\infty$ or $X\in L^2$, its variance is the quantity \[\mathrm{Var}~X = E[(X-EX)^2] =  EX^2-(EX)^2.\] We call the value $EX^\alpha$ the moment of order $\alpha$ (when it exists and is finite).
+
+\begin{prop}[Markov's inequality]
+  For every $\delta > 0$ and $\beta > 0$, we have \[\mathbb P(|X|\geq \delta)\leq \frac{E|X|^\beta}{\delta^\beta}.\]
+\end{prop}
+
+\emph{Proof.} Consider $A = \{\omega:|X(\omega)|\geq\delta\}$. Then $\chi_A \leq \chi_A\cdot (|X|^\beta/\delta^\beta)$ so that integrating gives our inequality.
+
+\begin{cor}[Chebyshev's inequality]
+  Let $X\in L^2$. Then for every $\alpha>0$ \[\mathbb P(|X-EX|\geq\alpha)\leq\frac{\mathrm{Var}~X}{\alpha^2}.\]
+\end{cor}
+
+We define the distribution of $X$ as the measure on the pullback. More formally, given random variable $X:(\Omega,\mathcal F,\mathbb P)\rightarrow (E,\mathcal E)$, for $A\in\mathcal E$, the measure $\mu_X$ is defined by $\mu_X(A) = \mathbb P(X^{-1}(A))$. 
+We can compute integrals under the image law via the following proposition:
+
+\begin{prop}
+  Let $X:(\Omega,\mathcal F,\mathbb P)\rightarrow (E,\mathcal E)$ be a random variable, $\mu_X$ its associated measure. Then a measurable function $f:(E,\mathcal E)\rightarrow (\mathbb R,B(R))$ is $\mu_X$-integrable iff $f(X)$ is $\mathbb P$-integrable and we have
+  \[\int_E f\mathrm d\mu_X = \int_\Omega f\circ X\mathrm d\mathbb P.\]
+\end{prop}
+\emph{Proof.} We show it is first true for characteristic functions, then it is true for simple random variables by linearity and hence positive random variables and so for all random variables.
+Let $f = \chi_A$ for some $A\in\mathcal E$. Then by definition we have our statement. Our proposition follows.
+
+Given two measures $\mu$ and $\nu$, we say $\mu$ is absolutely continuous with respect to $\nu$ if $\mu(A) = 0$  implies $\nu(A) = 0$. We denote this by $\mu\gg\nu$.
+
+\begin{prop}[Radon-Nikodym theorem]
+  If $mu\gg\nu$ then there exists a random variable $f\geq 0$ such that \[\nu(A) = \int_A f\mathrm d\mu.\]
+\end{prop}
+The proof of this theorem is relegated to the appendix.
+
+\section{Appendix}
+\subsection{Radon-Nikodym}
 \end{document}

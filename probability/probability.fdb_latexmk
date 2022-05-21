@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1652997932 "c:/Users/gabe/Documents/GitHub/finance/probability/probability.tex" "probability.pdf" "probability" 1652997935
-  "c:/Users/gabe/Documents/GitHub/finance/probability/probability.tex" 1652997931 15887 b2ebb3e8017d467cd21cd4c59c3ccc97 ""
+["pdflatex"] 1653161308 "c:/Users/gabe/Documents/GitHub/finance/probability/probability.tex" "probability.pdf" "probability" 1653161312
+  "c:/Users/gabe/Documents/GitHub/finance/probability/probability.tex" 1653161307 18480 322e8a989eeb6f4155f64a1a98c41a43 ""
   "d:/texlive/2021/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1635077812 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "d:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1635070000 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1635069494 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -212,11 +212,11 @@
   "d:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1635079128 4401551 1bd759c8357a3b5d0f473c07a2b217e5 ""
   "d:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1635079329 2805225 339abe83586caeff81e5373b6b0fcf44 ""
   "d:/texlive/2021/texmf.cnf" 1635079095 713 e69b156964470283e0530f5060668171 ""
-  "probability.aux" 1652997934 721 60a92a7e53077e9baf1c1a34c3f904b1 "pdflatex"
-  "probability.out" 1652997934 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "probability.tex" 1652997931 15887 b2ebb3e8017d467cd21cd4c59c3ccc97 ""
+  "probability.aux" 1653161311 1227 3c61348de44e1fbecac9e57689c00a31 "pdflatex"
+  "probability.out" 1653161311 756 ae2072c9c9a8d04bc362d21482b8e29b "pdflatex"
+  "probability.tex" 1653161307 18480 322e8a989eeb6f4155f64a1a98c41a43 ""
   (generated)
-  "probability.out"
   "probability.pdf"
-  "probability.aux"
   "probability.log"
+  "probability.out"
+  "probability.aux"
