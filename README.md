@@ -1,7 +1,7 @@
 <h1>
 Finance
 </h1>
----
+
 This repository is a collection of (academic) things I am learning while on my year off in pursuit of quantitative finance.
 
 The following are books I am trying to get through:
@@ -17,4 +17,3 @@ The following are books I am trying to get through:
 - T. Hastie et. al., The Elements of Statistical Learning.
 
 - S. Jansen, Machine Learning for Algorithmic Trading.
-
